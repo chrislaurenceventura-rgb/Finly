@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/finly_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/finly_background"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/finly_background"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/finly_text_primary"
+            app:title="Plan Details"
+            app:titleCentered="true"
+            app:titleTextColor="@color/finly_text_primary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/spacing_20"
+            android:paddingTop="@dimen/spacing_16"
+            android:paddingBottom="@dimen/spacing_32">
+
+            <!-- Goal Name & Target Header Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Finly.Card.Elevated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_20">
+
+                    <TextView
+                        android:id="@+id/tv_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/finly_text_primary"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        tools:text="New Laptop Goal" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_target"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_8"
+                        android:background="@drawable/badge_green"
+                        android:paddingHorizontal="@dimen/spacing_12"
+                        android:paddingVertical="@dimen/spacing_4"
+                        android:textColor="@color/finly_green_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:text="Target: ₱ 15,000.00" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Large Progress Indicator Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Finly.Card.Elevated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_24">
+
+                    <FrameLayout
+                        android:layout_width="180dp"
+                        android:layout_height="180dp">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/circular_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:progress="60"
+                            app:indicatorColor="@color/finly_green"
+                            app:indicatorSize="180dp"
+                            app:trackColor="@color/finly_blue_light"
+                            app:trackThickness="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_detail_percent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/finly_blue"
+                                android:textSize="36sp"
+                                android:textStyle="bold"
+                                tools:text="60%" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:letterSpacing="0.1"
+                                android:text="SAVED"
+                                android:textColor="@color/finly_text_secondary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Plan Generator & Countdown Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Finly.Card.Elevated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_20">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saving Plan Generator"
+                        android:textColor="@color/finly_text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_suggested_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_8"
+                        android:textColor="@color/finly_green_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Suggested: ₱ 250.00 / week" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_12"
+                        app:cardBackgroundColor="@color/finly_surface_variant"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/finly_outline"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/spacing_12">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:contentDescription="@null"
+                                android:src="@android:drawable/ic_menu_today"
+                                app:tint="@color/finly_blue" />
+
+                            <TextView
+                                android:id="@+id/tv_time_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/spacing_8"
+                                android:textColor="@color/finly_text_primary"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                tools:text="15 days 04h 22m 10s left" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Add Savings Action Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_saving"
+                style="@style/Widget.Finly.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_primary"
+                android:layout_marginTop="@dimen/spacing_24"
+                android:text="Add Savings"
+                app:icon="@android:drawable/ic_input_add"
+                app:iconGravity="textStart" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

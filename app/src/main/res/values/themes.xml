@@ -1,0 +1,56 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Savingsly" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/finly_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/finly_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/finly_background</item>
+        <item name="colorSurface">@color/finly_surface</item>
+        <item name="colorOnSurface">@color/finly_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/finly_text_secondary</item>
+        <item name="colorOutline">@color/finly_outline</item>
+        <item name="android:statusBarColor">@color/finly_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.Savingsly" parent="Base.Theme.Savingsly" />
+
+    <style name="Theme.Loginapp" parent="Theme.Savingsly" />
+
+    <!-- Button Styles -->
+    <style name="ShapeAppearanceOverlay.Material3.Button.Rounded" parent="">
+        <item name="cornerSize">@dimen/corner_radius_pill</item>
+    </style>
+
+    <style name="Widget.Finly.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/finly_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Material3.Button.Rounded</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- Outlined TextField Style -->
+    <style name="Widget.Finly.TextInputLayout.Outlined" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/input_field_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/input_field_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/input_field_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/input_field_corner_radius</item>
+        <item name="boxStrokeColor">@color/finly_blue</item>
+        <item name="hintTextColor">@color/finly_text_secondary</item>
+        <item name="startIconTint">@color/finly_text_secondary</item>
+        <item name="endIconTint">@color/finly_text_secondary</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="Widget.Finly.Card.Elevated" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/corner_radius_card</item>
+        <item name="cardElevation">@dimen/card_elevation_subtle</item>
+        <item name="cardBackgroundColor">@color/finly_surface</item>
+        <item name="strokeColor">@color/finly_outline</item>
+        <item name="strokeWidth">@dimen/card_stroke_width</item>
+    </style>
+</resources>

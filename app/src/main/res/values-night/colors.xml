@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- FINLY Fintech Dark Theme Palette -->
+    <color name="finly_blue">#818CF8</color>         <!-- Vibrant Indigo Light -->
+    <color name="finly_blue_dark">#0F172A</color>
+    <color name="finly_blue_light">#1E293B</color>   <!-- Slate Surface Tint -->
+    <color name="finly_green">#34D399</color>        <!-- Mint Emerald Accent -->
+    <color name="finly_green_dark">#059669</color>
+    <color name="finly_green_light">#064E3B</color>  <!-- Dark Mint Surface -->
+
+    <!-- Neutrals & Surfaces -->
+    <color name="finly_background">#0F172A</color>   <!-- Deep Slate Navy -->
+    <color name="finly_surface">#1E293B</color>      <!-- Dark Card Surface -->
+    <color name="finly_surface_variant">#334155</color>
+    <color name="finly_outline">#334155</color>      <!-- Dark Outline/Border -->
+
+    <!-- Typography Colors -->
+    <color name="finly_text_primary">#F8FAFC</color> <!-- White/Light Primary -->
+    <color name="finly_text_secondary">#94A3B8</color> <!-- Light Slate Secondary -->
+    <color name="finly_text_hint">#64748B</color>
+
+    <!-- Functional & Accents -->
+    <color name="finly_accent_blue">#6366F1</color>
+    <color name="primary">@color/finly_blue</color>
+    <color name="primary_variant">@color/finly_blue_dark</color>
+    <color name="secondary">@color/finly_green</color>
+
+    <color name="background">@color/finly_background</color>
+    <color name="error">#F87171</color>
+    <color name="white_gray">#334155</color>
+</resources>
